@@ -1,0 +1,47 @@
+{
+  "forward_longmsg": {
+    "description": "合并转发长消息",
+    "hint": "当群员发送的消息达到长度或图片数量阈值时，自动合并转发并撤回原消息。",
+    "type": "object",
+    "items": {
+      "group_whitelist": {
+        "description": "群聊白名单",
+        "type": "list",
+        "hint": "在此列表中的群聊才会触发长消息处理，留空表示全部群聊。",
+        "default": []
+      },
+      "user_whitelist": {
+        "description": "用户白名单",
+        "type": "list",
+        "hint": "列表中的用户发送的消息不会被处理和撤回。",
+        "default": []
+      },
+      "max_length": {
+        "description": "消息长度阈值",
+        "type": "int",
+        "hint": "当消息长度达到此值时，将触发合并转发。设为 0 表示不检查文本长度。",
+        "default": 300,
+        "minimum": 0,
+        "maximum": 2000,
+        "slider": {
+          "min": 0,
+          "max": 2000,
+          "step": 10
+        }
+      },
+      "max_image_count": {
+        "description": "图片数量阈值",
+        "type": "int",
+        "hint": "当同一条消息中的图片数量达到此值时，将触发合并转发。设为 0 表示不检查图片数量。",
+        "default": 0,
+        "minimum": 0,
+        "maximum": 20,
+        "slider": {
+          "min": 0,
+          "max": 20,
+          "step": 1
+        }
+      }
+    }
+  }
+}
