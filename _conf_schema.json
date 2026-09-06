@@ -1,4 +1,31 @@
 {
+  "manual_fold": {
+    "description": "手动消息折叠",
+    "hint": "通过引用消息使用折叠和折叠端点指令，手动合并转发并按需撤回原消息。",
+    "type": "object",
+    "items": {
+      "default_count": {
+        "description": "默认折叠数量",
+        "type": "int",
+        "hint": "折叠指令未填写数量时使用的数量。",
+        "default": 10,
+        "minimum": 1,
+        "maximum": 1000
+      },
+      "recall_original": {
+        "description": "折叠后撤回原消息",
+        "type": "bool",
+        "hint": "合并转发成功后，是否逐条尝试撤回原消息。",
+        "default": false
+      },
+      "fold_bot_messages": {
+        "description": "折叠 Bot 自身消息",
+        "type": "bool",
+        "hint": "是否让 Bot 自己发送的普通消息参与手动折叠。",
+        "default": false
+      }
+    }
+  },
   "forward_longmsg": {
     "description": "合并转发长消息",
     "hint": "当群员发送的消息达到长度或图片数量阈值时，自动合并转发并撤回原消息。",

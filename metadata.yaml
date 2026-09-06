@@ -1,8 +1,8 @@
 name: astrbot_plugin_anti_flood
-display_name: QQ 防刷屏
+display_name: QQ 折叠助手
 short_desc: 叽里咕噜说啥呢？太长不看！
-desc: 撤回并合并转发群员的长消息，保持群聊整洁。
-version: v1.0.0
+desc: 支持自动或手动将 QQ 群消息整理为合并转发并按需撤回。
+version: v1.1.0
 author: Foolllll
 author_url: https://github.com/Foolllll-J
 repo: https://github.com/Foolllll-J/astrbot_plugin_anti_flood
@@ -12,3 +12,4 @@ category: 工具
 tags:
   - 群管理
   - 防刷屏
+  - 消息折叠
